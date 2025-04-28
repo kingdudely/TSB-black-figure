@@ -16,6 +16,6 @@ Animation.AnimationId = "rbxassetid://10480796021"
 
 local AnimationTrack = Animator:LoadAnimation(Animation)
 
-getgenv().blackFigure = RunService.RenderStepped:Connect(function()
+getgenv().blackFigure = RunService.PreRender:Connect(function()
     AnimationTrack:Play(0.1, 1, 0) -- last parameter = speed
 end)
